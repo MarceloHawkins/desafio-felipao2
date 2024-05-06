@@ -1,12 +1,16 @@
-
+//Não vou mentir, apanhei um cadim nesse...
+//Vamos lá, primeiro eu fiz a função calcularNevilParaLista, com um for...in que passa em um Array aonde ele captura derrotas
+//e vitórias do Herói.
 function calcularNivelParaLista(partidas) {
-    for (var indice in partidas) {
-        var vitorias = partidas[indice][0];
-        var derrotas = partidas[indice][1];
-        var saldoVitorias = vitorias - derrotas;
-        var nivel;
+    for (let indice in partidas) {
+        let vitorias = partidas[indice][0];
+        let derrotas = partidas[indice][1];
+        let saldoVitorias = vitorias - derrotas;
+        let nivel;
+ //Em seguida,nas variáveis vitorias e derrotas capturei , usando o indice no Array o valor de respectivos de vitoria e derrota.
+ //Depois fiz oque foi anunciado no desafio, saldoVitorias = vitorias - derrotas      
   
-    
+//If, ifelse igualzinho ao desafio anterior, entra no if que representa o valor.
   if( vitorias <= 10) {
       nivel = "Ferro";
   } else if(vitorias >= 11 &&  vitorias <= 20) {
@@ -28,10 +32,11 @@ function calcularNivelParaLista(partidas) {
       nivelDoHeroi = "Imortal";
   }
 
+//Igualmente no anunciado, imprimir.
   console.log("O Herói tem saldo de " + saldoVitorias + " está no nível de " + nivel);
     }
 }
-
+//Variavel que guarda os valores de uma partida, para ser usado na Função calcularParaLista
 let partida = [[1,1]];
 
 calcularNivelParaLista(partida);
